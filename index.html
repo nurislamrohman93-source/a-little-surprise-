@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Afruja & Nurislam 💗</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    overflow:hidden;
+    font-family:Poppins,sans-serif;
+}
+
+/* ================= OPENING ================= */
+
+.opening{
+    position:fixed;
+    inset:0;
+    z-index:100;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+    background:
+    radial-gradient(circle at 50% 30%,
+    #fff8fb 0%,
+    #ffe4ee 30%,
+    #f8aecb 65%,
+    #e987ae 100%);
+
+    transition:
+    opacity 1s ease,
+    transform 1.2s ease;
+}
+
+.opening.hide{
+    opacity:0;
+    transform:scale(1.1);
+    pointer-events:none;
+}
+
+.glow{
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:white;
+    filter:blur(80px);
+    opacity:.45;
+}
+
+/* ================= TEDDY ================= */
+
+.teddyWrap{
+    position:relative;
+    animation:teddyFloat 3s ease-in-out infinite;
+}
+
+.teddyGlow{
+    position:absolute;
+    width:230px;
+    height:70px;
+    bottom:-20px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#c52c6d;
+    filter:blur(35px);
+    opacity:.25;
+}
+
+.teddy{
+    position:relative;
+    width:185px;
+    height:190px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:48% 48% 43% 43%;
+
+    background:
+    linear-gradient(145deg,
+    #ffcade,
+    #ff9fc4 45%,
+    #f46e9f);
+
+    box-shadow:
+    inset 15px 12px 25px rgba(255,255,255,.45),
+    inset -12px -18px 25px rgba(165,35,91,.16),
+    0 30px 55px rgba(135,28,73,.25);
+
+    cursor:pointer;
+}
+
+.ear{
+    position:absolute;
+    width:67px;
+    height:67px;
+    top:-25px;
+    border-radius:50%;
+
+    background:
+    linear-gradient(145deg,
+    #ffb8d3,
+    #f778a7);
+}
+
+.ear:after{
+    content:"";
+    position:absolute;
+    width:38px;
+    height:38px;
+    top:14px;
+    left:14px;
+    border-radius:50%;
+    background:#ff9fc2;
+}
+
+.ear.left{
+    left:0;
+}
+
+.ear.right{
+    right:0;
+}
+
+.face{
+    position:relative;
+    z-index:3;
+
+    width:115px;
+    height:105px;
+
+    border-radius:48%;
+    background:#ffb4cf;
+}
+
+.eye{
+    position:absolute;
+    width:12px;
+    height:16px;
+    top:36px;
+    border-radius:50%;
+    background:#542239;
+}
+
+.eye.left{
+    left:30px;
+}
+
+.eye.right{
+    right:30px;
+}
+
+.nose{
+    position:absolute;
+    width:18px;
+    height:14px;
+    left:50%;
+    top:52px;
+    transform:translateX(-50%);
+    border-radius:50%;
+    background:#8c3155;
+}
+
+.smile{
+    position:absolute;
+    width:25px;
+    height:12px;
+    left:50%;
+    top:65px;
+    transform:translateX(-50%);
+    border-bottom:3px solid #8c3155;
+    border-radius:50%;
+}
+
+.blush{
+    position:absolute;
+    width:25px;
+    height:12px;
+    top:57px;
+    border-radius:50%;
+    background:#ff7da9;
+    opacity:.45;
+    filter:blur(4px);
+}
+
+.blush.left{
+    left:8px;
+}
+
+.blush.right{
+    right:8px;
+}
+
+.teddyHeart{
+    position:absolute;
+    bottom:-13px;
+    right:-10px;
+    font-size:39px;
+
+    animation:heartBeat 1.5s infinite;
+}
+
+/* ================= FINGER ================= */
+
+.fingerHint{
+    position:absolute;
+    left:50%;
+    top:215px;
+    transform:translateX(-50%);
+
+    width:95px;
+    height:100px;
+
+    pointer-events:none;
+
+    animation:fingerTap 1.4s ease-in-out infinite;
+}
+
+.finger{
+    position:absolute;
+    left:27px;
+    top:0;
+    font-size:55px;
+
+    filter:
+    grayscale(1)
+    brightness(0)
+    invert(1)
+    drop-shadow(0 4px 0 #ff9fc4)
+    drop-shadow(0 7px 12px rgba(170,45,95,.22));
+}
+
+.tapCircle{
+    position:absolute;
+
+    width:46px;
+    height:46px;
+
+    left:24px;
+    top:48px;
+
+    border:2px solid white;
+    border-radius:50%;
+
+    animation:tapRing 1.4s ease-out infinite;
+}
+
+@keyframes fingerTap{
+
+    0%,100%{
+        transform:
+        translateX(-50%)
+        translateY(9px);
+    }
+
+    50%{
+        transform:
+        translateX(-50%)
+        translateY(-3px);
+    }
+}
+
+@keyframes tapRing{
+
+    0%{
+        transform:scale(.5);
+        opacity:0;
+    }
+
+    30%{
+        transform:scale(.9);
+        opacity:1;
+    }
+
+    100%{
+        transform:scale(1.5);
+        opacity:0;
+    }
+}
+
+@keyframes teddyFloat{
+
+    0%,100%{
+        transform:
+        translateY(0)
+        rotate(-1deg);
+    }
+
+    50%{
+        transform:
+        translateY(-14px)
+        rotate(1deg);
+    }
+}
+
+@keyframes heartBeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.12);
+    }
+}
+
+/* ================= OPEN TEXT ================= */
+
+.openTitle{
+    margin-top:65px;
+    text-align:center;
+    color:white;
+}
+
+.openTitle h2{
+    font-family:"DM Serif Display",serif;
+    font-size:31px;
+    font-weight:400;
+}
+
+.openTitle p{
+    margin-top:12px;
+    font-size:12px;
+    letter-spacing:4px;
+}
+
+/* ================= MAIN ================= */
+
+.main{
+    width:100%;
+    height:100vh;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    scrollbar-width:none;
+
+    background:
+    radial-gradient(circle at 15% 15%,
+    #fff2f7,
+    transparent 28%),
+
+    radial-gradient(circle at 85% 85%,
+    #ffb2ce,
+    transparent 30%),
+
+    linear-gradient(135deg,
+    #ffdce9,
+    #f8aec9,
+    #ffd1e2);
+}
+
+.main::-webkit-scrollbar{
+    display:none;
+}
+
+.card{
+    width:92%;
+    max-width:500px;
+
+    margin:40px auto 80px;
+
+    padding:50px 23px 65px;
+
+    text-align:center;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.28);
+
+    border:
+    1px solid rgba(255,255,255,.7);
+
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+
+    box-shadow:
+    0 30px 80px rgba(125,31,70,.2),
+    inset 0 1px 2px white;
+
+    animation:cardReveal 1.4s ease;
+}
+
+@keyframes cardReveal{
+
+    from{
+        opacity:0;
+        transform:
+        translateY(60px)
+        scale(.85);
+        filter:blur(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:
+        translateY(0)
+        scale(1);
+        filter:blur(0);
+    }
+}
+
+/* ================= HEADER ================= */
+
+.overline{
+    font-size:11px;
+    letter-spacing:5px;
+    color:#8d3a59;
+    margin-bottom:20px;
+}
+
+.love{
+    font-family:"DM Serif Display",serif;
+
+    font-size:
+    clamp(55px,15vw,82px);
+
+    line-height:.95;
+
+    color:#8b3155;
+
+    animation:lovePulse 2.4s infinite;
+}
+
+.love span{
+    display:block;
+}
+
+.name{
+    margin-top:22px;
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:34px;
+
+    color:#a03562;
+}
+
+.couple{
+    margin-top:14px;
+
+    color:#8d3a59;
+
+    font-family:Georgia,serif;
+
+    font-style:italic;
+
+    font-size:15px;
+}
+
+.divider{
+    width:75px;
+    height:2px;
+
+    margin:25px auto;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #a83c67,
+        transparent
+    );
+}
+
+/* ================= LOVE LETTER ================= */
+
+.loveLetter{
+    text-align:left;
+
+    color:#71324d;
+
+    font-family:Georgia,serif;
+
+    font-size:15px;
+
+    line-height:2;
+
+    font-style:italic;
+}
+
+.loveLetter p{
+    margin-bottom:23px;
+}
+
+/* ================= MEMORIES ================= */
+
+.memories{
+    margin-top:40px;
+}
+
+.memories h2,
+.section h2{
+    font-family:"DM Serif Display",serif;
+
+    font-size:29px;
+
+    color:#8d3157;
+}
+
+.memoryIntro{
+    margin:10px 0 23px;
+
+    color:#71324d;
+
+    font-family:Georgia,serif;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    font-style:italic;
+}
+
+.memoryGrid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:13px;
+}
+
+.memory{
+    min-height:160px;
+
+    padding:16px 9px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:24px;
+
+    background:
+    rgba(255,255,255,.35);
+
+    border:
+    1px solid rgba(255,255,255,.55);
+
+    box-shadow:
+    0 12px 25px
+    rgba(120,30,70,.1);
+}
+
+.memoryIcon{
+    width:62px;
+    height:62px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.6);
+
+    font-size:30px;
+
+    margin-bottom:10px;
+}
+
+.memory h3{
+    color:#8b3155;
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:18px;
+}
+
+.memory p{
+    margin-top:6px;
+
+    color:#71324d;
+
+    font-family:Georgia,serif;
+
+    font-size:11px;
+
+    line-height:1.6;
+
+    font-style:italic;
+}
+
+/* ================= QUOTE ================= */
+
+.quote{
+    margin:35px 0;
+
+    padding:25px 18px;
+
+    border-radius:26px;
+
+    background:
+    rgba(255,255,255,.25);
+
+    color:#8b3155;
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:21px;
+
+    line-height:1.7;
+}
+
+/* ================= LITTLE CARDS ================= */
+
+.littleThings{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:12px;
+}
+
+.littleCard{
+    padding:20px 10px;
+
+    border-radius:22px;
+
+    background:
+    rgba(255,255,255,.25);
+
+    border:
+    1px solid rgba(255,255,255,.45);
+}
+
+.emoji{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.littleCard h3{
+    color:#8b3155;
+    font-size:14px;
+}
+
+.littleCard p{
+    margin-top:6px;
+
+    color:#71324d;
+
+    font-size:11px;
+
+    line-height:1.6;
+}
+
+/* ================= CHOCOLATE ================= */
+
+.chocolateBox{
+    margin:42px auto 8px;
+
+    width:170px;
+    height:125px;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    pointer-events:none;
+
+    animation:
+    chocolateFloat 2.5s
+    infinite ease-in-out;
+}
+
+.chocolateGlow{
+    position:absolute;
+
+    width:130px;
+    height:55px;
+
+    bottom:0;
+
+    background:#9b4770;
+
+    filter:blur(25px);
+
+    opacity:.2;
+}
+
+.chocolate{
+    position:relative;
+
+    width:125px;
+    height:70px;
+
+    border-radius:
+    12px 12px 20px 20px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #8b4a32,
+        #542719
+    );
+
+    box-shadow:
+    inset 5px 5px 10px
+    rgba(255,255,255,.2),
+
+    0 15px 30px
+    rgba(75,30,15,.25);
+}
+
+.chocolate:before{
+    content:"";
+
+    position:absolute;
+
+    inset:8px;
+
+    border-radius:7px;
+
+    background:
+    repeating-linear-gradient(
+        90deg,
+        transparent 0 27px,
+        rgba(40,15,8,.3)
+        28px 30px
+    ),
+
+    repeating-linear-gradient(
+        0deg,
+        transparent 0 25px,
+        rgba(40,15,8,.3)
+        26px 28px
+    );
+}
+
+.ribbon{
+    position:absolute;
+
+    width:22px;
+    height:90px;
+
+    left:50%;
+    top:-10px;
+
+    transform:translateX(-50%);
+
+    background:
+    linear-gradient(
+        90deg,
+        #ff9fc4,
+        #ffc5da,
+        #ff9fc4
+    );
+
+    z-index:2;
+}
+
+.bow{
+    position:absolute;
+
+    top:-25px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:38px;
+
+    z-index:3;
+}
+
+.chocoText{
+    color:#8b3155;
+
+    font-family:
+    "DM Serif Display",serif;
+
+    font-size:19px;
+
+    font-style:italic;
+}
+
+/* ================= CARE ================= */
+
+.section{
+    margin-top:38px;
+
+    padding:27px 19px;
+
+    border-radius:28px;
+
+    background:
+    rgba(255,255,255,.25);
+
+    border:
+    1px solid rgba(255,255,255,.5);
+}
+
+.section h2{
+    margin-bottom:17px;
+}
+
+.section > p{
+    color:#71324d;
+
+    font-family:Georgia,serif;
+
+    font-size:14px;
+
+    line-height:2;
+
+    font-style:italic;
+
+    text-align:left;
+}
+
+.careList{
+    margin-top:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+}
+
+.careItem{
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px;
+
+    text-align:left;
+
+    border-radius:19px;
+
+    background:
+    rgba(255,255,255,.28);
+
+    color:#71324d;
+
+    font-size:13px;
+}
+
+.careItem span{
+    font-size:25px;
+}
+
+/* ================= PROMISES ================= */
+
+.promiseTitle{
+    margin-top:42px;
+
+    color:#8d3157;
+
+    font-family:
+    "DM Serif Display",serif;
+
+    font-size:29px;
+}
+
+.promise{
+    margin-top:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:16px;
+
+    text-align:left;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.23);
+
+    border:
+    1px solid rgba(255,255,255,.4);
+}
+
+.promise span{
+    font-size:25px;
+}
+
+.promise p{
+    color:#71324d;
+
+    font-family:Georgia,serif;
+
+    font-style:italic;
+
+    font-size:13px;
+
+    line-height:1.7;
+}
+
+/* ================= FINAL LETTER ================= */
+
+.finalMessage{
+    margin-top:45px;
+
+    padding:30px 20px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.42),
+        rgba(255,210,228,.3)
+    );
+
+    border:
+    1px solid rgba(255,255,255,.65);
+
+    box-shadow:
+    0 15px 35px
+    rgba(120,30,70,.12);
+}
+
+.finalTitle{
+    font-family:
+    "DM Serif Display",serif;
+
+    font-size:30px;
+
+    color:#8b3155;
+
+    margin-bottom:20px;
+}
+
+.finalText{
+    color:#71324d;
+
+    font-family:Georgia,serif;
+
+    font-size:14px;
+
+    line-height:2;
+
+    font-style:italic;
+
+    text-align:left;
+}
+
+.finalDecor{
+    margin-top:22px;
+
+    font-size:28px;
+
+    letter-spacing:5px;
+
+    animation:
+    heartBeat 1.7s infinite;
+}
+
+.final{
+    margin-top:35px;
+
+    font-family:
+    "DM Serif Display",serif;
+
+    font-size:29px;
+
+    color:#8b3155;
+
+    font-style:italic;
+}
+
+.forever{
+    margin-top:13px;
+
+    color:#9b4666;
+
+    font-size:11px;
+
+    letter-spacing:4px;
+}
+
+.endHeart{
+    margin-top:20px;
+
+    font-size:32px;
+
+    animation:
+    heartBeat 1.5s infinite;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes chocolateFloat{
+
+    0%,100%{
+        transform:
+        translateY(0)
+        rotate(-1deg);
+    }
+
+    50%{
+        transform:
+        translateY(-8px)
+        rotate(1deg);
+    }
+}
+
+@keyframes lovePulse{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.035);
+    }
+}
+
+/* ================= FLOATING HEARTS ================= */
+
+.float{
+    position:fixed;
+
+    pointer-events:none;
+
+    z-index:20;
+
+    animation:
+    floatUp linear forwards;
+}
+
+@keyframes floatUp{
+
+    0%{
+        transform:
+        translateY(30px)
+        rotate(0);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:.8;
+    }
+
+    100%{
+        transform:
+        translateY(-110vh)
+        rotate(360deg);
+
+        opacity:0;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:380px){
+
+    .card{
+        width:94%;
+        padding:40px 17px 55px;
+    }
+
+    .loveLetter{
+        font-size:14px;
+    }
+
+    .promise p{
+        font-size:12px;
+    }
+
+    .finalText{
+        font-size:13px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= OPENING ================= -->
+
+<div class="opening" id="opening">
+
+    <div class="glow"></div>
+
+    <div class="teddyWrap">
+
+        <div class="teddyGlow"></div>
+
+        <div class="teddy" id="teddy">
+
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+
+            <div class="face">
+
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+
+                <div class="blush left"></div>
+                <div class="blush right"></div>
+
+                <div class="nose"></div>
+                <div class="smile"></div>
+
+            </div>
+
+            <div class="teddyHeart">
+                💗
+            </div>
+
+        </div>
+
+        <div class="fingerHint">
+
+            <div class="finger">
+                👆
+            </div>
+
+            <div class="tapCircle"></div>
+
+        </div>
+
+    </div>
+
+    <div class="openTitle">
+
+        <h2>
+            A Little Surprise
+        </h2>
+
+        <p>
+            MADE WITH LOVE
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ================= MAIN PAGE ================= -->
+
+<div class="main" id="main">
+
+<div class="card">
+
+    <div class="overline">
+        A LITTLE MESSAGE
+    </div>
+
+    <div class="love">
+        <span>I Love</span>
+        <span>You ❤️</span>
+    </div>
+
+    <div class="name">
+        Afruja
+    </div>
+
+    <div class="couple">
+        Afruja ♡ Nurislam
+    </div>
+
+    <div class="divider"></div>
+
+
+    <!-- LOVE LETTER -->
+
+    <div class="loveLetter">
+
+        <p>
+        *Dear Afruja, sometimes the smallest
+        moments become the sweetest memories.
+        A simple conversation, a smile, a kind
+        word, or even a peaceful moment can
+        become something worth remembering.*
+        </p>
+
+        <p>
+        *Love is not only about saying beautiful
+        words. It is also about caring, listening,
+        understanding, respecting feelings and
+        being kind to each other.*
+        </p>
+
+        <p>
+        *Nurislam and Afruja — two names,
+        countless little moments, and a beautiful
+        collection of memories that deserve to
+        be appreciated.*
+        </p>
+
+        <p>
+        *I hope every new day brings you more
+        reasons to smile, more peaceful moments,
+        more confidence in yourself and many
+        beautiful memories to keep.*
+        </p>
+
+    </div>
+
+
+    <!-- MEMORIES -->
+
+    <div class="memories">
+
+        <h2>
+            Our Little Memories 💗
+        </h2>
+
+        <div class="memoryIntro">
+            *Some memories do not need photographs.
+            They stay quietly inside the heart.* ✨
+        </div>
+
+        <div class="memoryGrid">
+
+            <div class="memory">
+                <div class="memoryIcon">🌷</div>
+                <h3>Sweet Moments</h3>
+                <p>
+                    Little moments that make
+                    ordinary days special.
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="memoryIcon">🥰</div>
+                <h3>Happy Smiles</h3>
+                <p>
+                    The smiles that make memories
+                    worth keeping.
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="memoryIcon">💌</div>
+                <h3>Little Talks</h3>
+                <p>
+                    Simple conversations that
+                    become special.
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="memoryIcon">✨</div>
+                <h3>Beautiful Days</h3>
+                <p>
+                    Every good day becomes another
+                    little memory.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUOTE -->
+
+    <div class="quote">
+        “The sweetest kind of love is gentle,
+        honest, caring and full of respect.” 🥰
+    </div>
+
+
+    <!-- LITTLE THINGS -->
+
+    <div class="littleThings">
+
+        <div class="littleCard">
+            <div class="emoji">🌷</div>
+            <h3>Your Smile</h3>
+            <p>
+                A little smile can brighten
+                an ordinary day.
+            </p>
+        </div>
+
+        <div class="littleCard">
+            <div class="emoji">💌</div>
+            <h3>Kind Words</h3>
+            <p>
+                Kind words can make someone
+                feel appreciated.
+            </p>
+        </div>
+
+        <div class="littleCard">
+            <div class="emoji">🫶</div>
+            <h3>Care</h3>
+            <p>
+                Caring means listening,
+                understanding and helping.
+            </p>
+        </div>
+
+        <div class="littleCard">
+            <div class="emoji">✨</div>
+            <h3>Memories</h3>
+            <p>
+                Little moments can become
+                unforgettable memories.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- CHOCOLATE -->
+
+    <div class="chocolateBox">
+
+        <div class="chocolateGlow"></div>
+
+        <div class="chocolate">
+
+            <div class="ribbon"></div>
+
+            <div class="bow">
+                🎀
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="chocoText">
+        A little chocolate for a sweet person 🍫💗
+    </div>
+
+
+    <!-- CARE -->
+
+    <div class="section">
